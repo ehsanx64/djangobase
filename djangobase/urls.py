@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from . import site
+
 urlpatterns = [
+    # Comment following two lines to get Django's default web page
+    path('', site.index),
+    path('hello', site.hello),
     path('admin/', admin.site.urls),
 ]
