@@ -22,5 +22,6 @@ urlpatterns = [
     # Comment following two lines to get Django's default web page
     path('', site.index),
     path('hello', site.hello),
+    
     path('admin/', admin.site.urls),
 ]
