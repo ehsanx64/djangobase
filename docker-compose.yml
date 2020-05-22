@@ -1,0 +1,11 @@
+version: '3'
+services:
+    main:
+        container_name: djangobase
+        image: python:3.4
+        volumes:
+            - .:/usr/src/djangobase
+        working_dir: /usr/src/djangobase
+        ports:
+            - 8083:80
+        command: /bin/bash -c "pip install -r requirements.txt && python manage.py runserver"
