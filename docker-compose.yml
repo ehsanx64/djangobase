@@ -2,7 +2,7 @@ version: '3'
 services:
     main:
         container_name: djangobase
-        image: python:3.4
+        image: python:3.7
         volumes:
             - .:/usr/src/djangobase
         working_dir: /usr/src/djangobase
