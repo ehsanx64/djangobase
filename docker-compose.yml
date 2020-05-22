@@ -8,4 +8,4 @@ services:
         working_dir: /usr/src/djangobase
         ports:
             - 8083:80
-        command: /bin/bash -c "pip install -r requirements.txt && gunicorn djangobase:wsgi --bind 0.0.0.0:8083"
+        command: /bin/bash -c "pip install -r requirements.txt && gunicorn djangobase.wsgi --bind 0.0.0.0:8083"
