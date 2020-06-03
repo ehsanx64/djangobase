@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from . import site
 
@@ -22,6 +22,7 @@ urlpatterns = [
     # Comment following two lines to get Django's default web page
     path('', site.index),
     path('hello', site.hello),
-    
+
+    path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
